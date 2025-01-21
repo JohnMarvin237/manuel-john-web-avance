@@ -1,10 +1,13 @@
 import styles from './Header.module.css';
+import Image from 'next/image';
+import logo from "@/public/logo.ico";
 /*import { useState } from 'react';
 const [loggedIn, setLoggedIn] = useState(false);*/
 
 export default function Header() {
     
     return <header className={ styles.header }>
+        <Image className={ styles.image } src={ logo } alt="logo"/>
         <h1 className={ styles.title }>John-Manuel Dev Solutions</h1>
         <nav className={ styles.nav}>
             <ul className={ styles.navList }>
