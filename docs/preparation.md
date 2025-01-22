@@ -1,5 +1,5 @@
 # Description du site web de John-Manuel Dev Solutions
- Ce projet est un site web destiné à exposer les projets réalisés par l'entreprise **John-Manuel Dev Solutions**. Il permet de mettre en valeur nos réalisations à travers une galerie de projets, des témoignages clients, et des fonctionnalités de recherche et de filtrage pour faciliter la navigation.
+    Ce projet est un site web destiné à exposer les projets réalisés par l'entreprise **John-Manuel Dev Solutions**. Il permet de mettre en valeur nos réalisations à travers une galerie de projets, des témoignages clients, et des fonctionnalités de recherche et de filtrage pour faciliter la navigation.
 
 ## Fonctionnalités
 - **Galerie de Projets** : Affichage des projets avec des images et des descriptions détaillées.
