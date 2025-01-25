@@ -1,0 +1,22 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carouselItem {
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }

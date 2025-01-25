@@ -1,21 +1,21 @@
 import styles from './Header.module.css';
 import Image from 'next/image';
-import logo from "@/public/logo.ico";
+import logo from "@/public/logo.jpg";
 /*import { useState } from 'react';
 const [loggedIn, setLoggedIn] = useState(false);*/
 
 export default function Header() {
-    
-    return <header className={ styles.header }>
-        <Image className={ styles.image } src={ logo } alt="logo"/>
-        <h1 className={ styles.title }>John-Manuel Dev Solutions</h1>
-        <nav className={ styles.nav}>
-            <ul className={ styles.navList }>
-                <li><a href="#home" className={ styles.navItem }>Accueil</a></li>
-                <li><a href="#products" className={ styles.navItem }>Produits</a></li>
-                <li><a href="#solutions" className={ styles.navItem }>Solutions</a></li>
-                <li><a href="#sales-and-support" className={ styles.navItem }>Ventes&support</a></li>
-                <li><a href="#contact" className={ styles.navItem }>Contact</a></li>
+
+    return <header className={styles.header}>
+        <Image className={styles.image} src={logo} alt="logo" />
+        <h1 className={styles.title}>John-Manuel Dev Solutions</h1>
+        <nav className={styles.nav}>
+            <ul className={styles.navList}>
+                <li><a href="#home" className={styles.navItem}>Accueil</a></li>
+                <li><a href="#products" className={styles.navItem}>Produits</a></li>
+                <li><a href="#solutions" className={styles.navItem}>Solutions</a></li>
+                <li><a href="#sales-and-support" className={styles.navItem}>Ventes&support</a></li>
+                <li><a href="#contact" className={styles.navItem}>Contact</a></li>
             </ul>
         </nav>
         {/*<button onClick={ () => setLoggedIn(!loggedIn)}>
