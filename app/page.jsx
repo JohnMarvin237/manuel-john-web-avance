@@ -52,7 +52,7 @@ const items = [
     <Image key={12} src={Image12}></Image>,
     <Image key={13} src={Image13}></Image>,
     <Image key={14} src={Image14}></Image>,
-    <Image key={115} src={Image15}></Image>,
+    <Image key={15} src={Image15}></Image>,
 ];
 
 export default function Accueil() {
