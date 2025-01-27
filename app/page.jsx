@@ -123,8 +123,7 @@ export default function Accueil() {
                         <span className={styles.keywordCard}>Gestion des services</span>
                         <span className={styles.keywordCard}>Gestion des stocks</span>
                         <span className={styles.keywordCard}>Gestion des quarts</span>
-                    </CardHolder>
-                                        
+                    </CardHolder>                                        
                 </div>                
             </div>
                         
