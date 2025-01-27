@@ -25,6 +25,7 @@
     align-items: center;
     width: 98%;
     margin: 0 auto;
+    border-radius: 25px 5px 5px 25px;
 }
 
 .project h2{
@@ -49,10 +50,28 @@
     background-color: #d6d6d6;
 }
 
-/* .{
+.expertise{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #fff;
     border-radius: 10px;
-} */
+}
+
+.expertiseTitle{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    align-self: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: absolute;
+    left: 2%;
+}
+
+.expertiseContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}

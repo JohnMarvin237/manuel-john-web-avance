@@ -2,16 +2,22 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import CardHolder from '@/components/CardHolder';
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg'
-
-// import Aquaponie2 from '@/public/AquaponieWebAvancee2.jpg'
-// import DroneIntell from '@/public/DroneAgriWebAvancee.jpg'
+import Aquaponie2 from '@/public/AquaponieWebAvancee2.jpg';
+import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
+import ChatBot from '@/public/chatbot.png';
+import GestionEmployes from '@/public/gestionEmployes.png'
 import SearchBar from "@/components/SearchBar";
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import Carousel from "@/components/Carousel";
 
 // Importation des images pour le caroussel
 import Image1 from '@/public/AI.jpg';
 import Image2 from '@/public/power-bi_logo.png';
 import Image3 from '@/public/aws.png';
-import Image4 from '@/public/iot.jpg';
+import Image4 from '@/public/iot.png';
 import Image5 from '@/public/C_Sharp.png';
 import Image6 from '@/public/Python-logo.png';
 import Image7 from '@/public/java.jpg';
@@ -26,7 +32,7 @@ import Image15 from '@/public/embedded-systems.png';
 import Image16 from '@/public/GCP.png';
 import Image17 from '@/public/GitHub-Logo.png';
 import Image18 from '@/public/gitlab.png';
-import Image19 from '@/public/iot.jpg';
+import Image19 from '@/public/bigdata2.png';
 import Image20 from '@/public/java.jpg';
 import Image21 from '@/public/Javascript.png';
 import Image22 from '@/public/Jenkins-Logo.jpg';
@@ -37,23 +43,37 @@ import Image26 from '@/public/Node-js-Logo.png';
 import Image27 from '@/public/Python-logo.png';
 import Image28 from '@/public/WebDev.jpg';
 
-const items = [
-    <Image key={1} src={Image1}></Image>,
-    <Image key={2} src={Image2}></Image>,
-    <Image key={3} src={Image3}></Image>,
-    <Image key={4} src={Image4}></Image>,
-    <Image key={5} src={Image5}></Image>,
-    <Image key={6} src={Image6}></Image>,
-    <Image key={7} src={Image7}></Image>,
-    <Image key={8} src={Image8}></Image>,
-    <Image key={9} src={Image9}></Image>,
-    <Image key={10} src={Image10}></Image>,
-    <Image key={11} src={Image11}></Image>,
-    <Image key={12} src={Image12}></Image>,
-    <Image key={13} src={Image13}></Image>,
-    <Image key={14} src={Image14}></Image>,
-    <Image key={15} src={Image15}></Image>,
-];
+// Création du tableau des images
+const slides = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+    Image10,
+    Image11,
+    Image12,
+    Image13,
+    Image14,
+    Image15,
+    Image16,
+    Image17,
+    Image18,
+    Image19,
+    Image20,
+    Image21,
+    Image22,
+    Image23,
+    Image24,
+    Image25,
+    Image26,
+    Image27,
+    Image28
+]
 
 export default function Accueil() {
     return <>
@@ -62,7 +82,12 @@ export default function Accueil() {
 
             </div>
             <div className={ styles.expertise }>
-                {/* <CarouselNew slides={items} /> */}
+                <div className={styles.expertiseTitle}>
+                    <h2>Notre Expertise</h2>
+                </div>
+                <div className={styles.expertiseContent}>
+                    <Carousel slides={slides}/>
+                </div>                
             </div>
             <div className={ styles.testimonial}>
 
@@ -77,26 +102,27 @@ export default function Accueil() {
                         <span className={styles.keywordCard}>Electronique</span>
                         <span className={styles.keywordCard}>Poissons</span>
                     </CardHolder>
-                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={ Aquaponie1 } >
+                    <CardHolder titleCard='Crop Checker' description="Détection des anomalies dans les plantations" imageCard={ DroneIntell } >
                         <span className={styles.keywordCard}>IA</span>
-                        <span className={styles.keywordCard}>Poissons</span>
+                        <span className={styles.keywordCard}>Drone</span>
                         <span className={styles.keywordCard}>Végétaux</span>
                         <span className={styles.keywordCard}>Electronique</span>
-                        <span className={styles.keywordCard}>Poissons</span>
+                        <span className={styles.keywordCard}>Analyse</span>
                     </CardHolder>
-                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={ Aquaponie1 } >
+                    <CardHolder titleCard='ChatBot AI' description="Création d'un ChatBot pour automatiser les requêtes des utilisateurs à l'aide de l'inteligence artificielle" imageCard={ ChatBot } >
                         <span className={styles.keywordCard}>IA</span>
-                        <span className={styles.keywordCard}>Poissons</span>
-                        <span className={styles.keywordCard}>Végétaux</span>
-                        <span className={styles.keywordCard}>Electronique</span>
-                        <span className={styles.keywordCard}>Poissons</span>
+                        <span className={styles.keywordCard}>Assistant Virtuel</span>
+                        <span className={styles.keywordCard}>Accès 24/7</span>
+                        <span className={styles.keywordCard}>Expérience client</span>
+                        <span className={styles.keywordCard}>Multilangues</span>
+                        <span className={styles.keywordCard}>Langage naturel</span>
                     </CardHolder>
-                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={ Aquaponie1 } >
-                        <span className={styles.keywordCard}>IA</span>
-                        <span className={styles.keywordCard}>Poissons</span>
-                        <span className={styles.keywordCard}>Végétaux</span>
-                        <span className={styles.keywordCard}>Electronique</span>
-                        <span className={styles.keywordCard}>Poissons</span>
+                    <CardHolder titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou un entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={ GestionEmployes } >
+                        <span className={styles.keywordCard}>Gestion des paies</span>
+                        <span className={styles.keywordCard}>Gestion des congés</span>
+                        <span className={styles.keywordCard}>Gestion des services</span>
+                        <span className={styles.keywordCard}>Gestion des stocks</span>
+                        <span className={styles.keywordCard}>Gestion des quarts</span>
                     </CardHolder>
                                         
                 </div>                

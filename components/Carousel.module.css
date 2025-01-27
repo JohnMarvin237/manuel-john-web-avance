@@ -9,7 +9,7 @@
     text-align: center;
   }
   
-  button {
+  .button {
     background-color: #0070f3;
     color: white;
     border: none;
@@ -17,6 +17,12 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .button:hover {
     background-color: #005bb5;
+  }
+
+  .image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
   }
