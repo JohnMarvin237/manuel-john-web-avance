@@ -8,9 +8,6 @@ import ChatBot from '@/public/chatbot.png';
 import GestionEmployes from '@/public/gestionEmployes.png'
 import SearchBar from "@/components/SearchBar";
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import Carousel from "@/components/Carousel";
 
 // Importation des images pour le caroussel
