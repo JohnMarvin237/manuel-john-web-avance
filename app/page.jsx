@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import CardHolder from '@/components/CardHolder';
+import MemberProfile from '@/components/MemberProfile';
+
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg'
 import Aquaponie2 from '@/public/AquaponieWebAvancee2.jpg';
 import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
@@ -39,6 +41,7 @@ import Image25 from '@/public/NextJs.png';
 import Image26 from '@/public/Node-js-Logo.png';
 import Image27 from '@/public/Python-logo.png';
 import Image28 from '@/public/WebDev.jpg';
+import Personne from "@/public/personne7.png";
 
 // Création du tableau des images
 const slides = [
@@ -124,7 +127,15 @@ export default function Accueil() {
                 </div>                
             </div>
                         
-            <div className={ styles.team }></div>
+            <div className={ styles.team }>
+                <h2>Notre équipe</h2>
+                <div className={ styles.teamContainer }>
+                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
+                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
+                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
+                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
+                </div>
+            </div>
         </div>
     </>;
 };
