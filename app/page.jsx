@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import CardHolder from '@/components/CardHolder';
 import MemberProfile from '@/components/MemberProfile';
+import Banner from '@/components/Banner';
 
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg'
 import Aquaponie2 from '@/public/AquaponieWebAvancee2.jpg';
@@ -42,6 +43,7 @@ import Image26 from '@/public/Node-js-Logo.png';
 import Image27 from '@/public/Python-logo.png';
 import Image28 from '@/public/WebDev.jpg';
 import Personne from "@/public/personne7.png";
+import Banniere from "@/public/banniereImg2.jpeg";
 
 // Création du tableau des images
 const slides = [
@@ -79,7 +81,8 @@ export default function Accueil() {
     return <>
         <div className={styles.home}>
             <div className={ styles.banner }>
-
+                <Banner fontImage={Banniere} slogan="Une solution technologique à chaque problème du quotidien!" ctaButton="En savoir plus">
+                </Banner>
             </div>
             <div className={ styles.expertise }>
                 <div className={styles.expertiseTitle}>
@@ -131,9 +134,9 @@ export default function Accueil() {
                 <h2>Notre équipe</h2>
                 <div className={ styles.teamContainer }>
                     <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
-                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
-                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
-                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
+                    <MemberProfile name='Jean Jacques' role='Développeur Mobile' description='Développeur mobile fullstack' image={ Personne } />
+                    <MemberProfile name='John Marvin' role='DevSecOps' description='Integration et Deploiement continu' image={ Personne } />
+                    <MemberProfile name='Manuel Luther' role='IA Developpeur' description='Développeur de solution a base de l intelligence artificielle' image={ Personne } />
                 </div>
             </div>
         </div>
