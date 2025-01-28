@@ -1,6 +1,7 @@
 import styles from './Header.module.css';
 import Image from 'next/image';
 import logo from "@/public/logo.jpg";
+import Link from 'next/link';
 /*import { useState } from 'react';
 const [loggedIn, setLoggedIn] = useState(false);*/
 
@@ -11,11 +12,11 @@ export default function Header() {
         <h1 className={styles.title}>John-Manuel Dev Solutions</h1>
         <nav className={styles.nav}>
             <ul className={styles.navList}>
-                <li><a href="#home" className={styles.navItem}>Accueil</a></li>
-                <li><a href="#products" className={styles.navItem}>Produits</a></li>
-                <li><a href="#solutions" className={styles.navItem}>Solutions</a></li>
-                <li><a href="#sales-and-support" className={styles.navItem}>Ventes&support</a></li>
-                <li><a href="#contact" className={styles.navItem}>Contact</a></li>
+                <li><Link href="#home" className={styles.navItem}>Accueil</Link></li>
+                <li><Link href="#products" className={styles.navItem}>Produits</Link></li>
+                <li><Link href="/solutions" className={styles.navItem}>Solutions</Link></li>
+                <li><Link href="#sales-and-support" className={styles.navItem}>Ventes&support</Link></li>
+                <li><Link href="#contact" className={styles.navItem}>Contact</Link></li>
             </ul>
         </nav>
         {/*<button onClick={ () => setLoggedIn(!loggedIn)}>

@@ -8,7 +8,7 @@ import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg'
 import Aquaponie2 from '@/public/AquaponieWebAvancee2.jpg';
 import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
 import ChatBot from '@/public/chatbot.png';
-import GestionEmployes from '@/public/gestionEmployes.png'
+import GestionEmployes from '@/public/gestionEmployes.png';
 import SearchBar from "@/components/SearchBar";
 
 import AccueilLink from "@/app/page";
