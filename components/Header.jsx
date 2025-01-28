@@ -12,8 +12,8 @@ export default function Header() {
         <h1 className={styles.title}>John-Manuel Dev Solutions</h1>
         <nav className={styles.nav}>
             <ul className={styles.navList}>
-                <li><Link href="#home" className={styles.navItem}>Accueil</Link></li>
-                <li><Link href="#products" className={styles.navItem}>Produits</Link></li>
+                <li><Link href="/" className={styles.navItem}>Accueil</Link></li>
+                <li><Link href="/produits" className={styles.navItem}>Produits</Link></li>
                 <li><Link href="/solutions" className={styles.navItem}>Solutions</Link></li>
                 <li><Link href="#sales-and-support" className={styles.navItem}>Ventes&support</Link></li>
                 <li><Link href="#contact" className={styles.navItem}>Contact</Link></li>
