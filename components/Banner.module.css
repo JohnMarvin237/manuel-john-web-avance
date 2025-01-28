@@ -1,11 +1,11 @@
-.banner{
+.banner {
     position: relative;
-    width:  100vw;
+    width: 100vw;
     height: 500px;
     overflow: hidden;
 }
 
-.background{
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,7 +17,7 @@
     opacity: .9;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +26,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
-.content{
+
+.content {
     position: relative;
     text-align: center;
     color: white;
@@ -35,7 +36,7 @@
     transform: translate(-50%, -50%);
 }
 
-.button{
+.button {
     background-color: #0056D2;
     color: white;
     border: none;
@@ -46,20 +47,22 @@
     transition: transform 0.3 ease;
 }
 
-.button:hover{
+.button:hover {
     animation: buttonHover 0.6s ease-in-out;
 }
 
-@keyframes buttonHover{
-    0%{
+@keyframes buttonHover {
+    0% {
         transform: scale(1);
         background-color: #d6d6d6;
     }
-    50%{
+
+    50% {
         transform: scale(1.1);
         background-color: #0056D2;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         background-color: #d6d6d6;
     }
