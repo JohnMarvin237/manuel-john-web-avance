@@ -11,6 +11,7 @@ import ChatBot from '@/public/chatbot.png';
 import GestionEmployes from '@/public/gestionEmployes.png'
 import SearchBar from "@/components/SearchBar";
 
+import AccueilLink from "@/app/page";
 import Carousel from "@/components/Carousel";
 
 // Importation des images pour le caroussel
@@ -80,9 +81,11 @@ const slides = [
 export default function Accueil() {
     return <>
         <div className={styles.home}>
-            <div className={ styles.banner }>
-                <Banner fontImage={Banniere} slogan="Une solution technologique à chaque problème du quotidien!" ctaButton="En savoir plus">
-                </Banner>
+            <div className={ styles.bannerContainer }>
+                {/* <Banner slogan="Une solution technologique à chaque problème du quotidien!" ctaButton="En savoir plus">
+                </Banner> 
+                ButtonLink={AccueilLink}*/}
+                <Banner slogan='Une solution technologique a chaque probleme du quotidien' ButtonName='En savoir plus' fontImage={Banniere} />
             </div>
             <div className={ styles.expertise }>
                 <div className={styles.expertiseTitle}>

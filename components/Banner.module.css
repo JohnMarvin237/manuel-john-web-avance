@@ -1,45 +1,66 @@
-.banner {
+.banner{
     position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    /* Ajustez la hauteur selon vos besoins */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:  100vw;
+    height: 500px;
+    overflow: hidden;
 }
 
-.overlay {
+.background{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgba(45, 43, 43, 0.27);
-    /* Couleur de l'overlay */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: .9;
 }
 
-.ctaButton {
-    background-color: #007BFF;
-    /* Couleur du bouton */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.content{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button{
+    background-color: #0056D2;
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    border-radius: 5px;
+    transition: transform 0.3 ease;
 }
 
-.ctaButton:hover {
-    background-color: #0056D2;
-    /* Couleur du bouton au survol */
+.button:hover{
+    animation: buttonHover 0.6s ease-in-out;
+}
+
+@keyframes buttonHover{
+    0%{
+        transform: scale(1);
+        background-color: #d6d6d6;
+    }
+    50%{
+        transform: scale(1.1);
+        background-color: #0056D2;
+    }
+    100%{
+        transform: scale(1);
+        background-color: #d6d6d6;
+    }
 }
