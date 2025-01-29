@@ -13,7 +13,7 @@ export default function Header() {
         <nav className={styles.nav}>
             <ul className={styles.navList}>
                 <li><Link href="/" className={styles.navItem}>Accueil</Link></li>
-                <li><Link href="/produits" className={styles.navItem}>Produits</Link></li>
+                <li><Link href="/projects" className={styles.navItem}>Projets</Link></li>
                 <li><Link href="/solutions" className={styles.navItem}>Solutions</Link></li>
                 <li><Link href="#sales-and-support" className={styles.navItem}>Ventes&support</Link></li>
                 <li><Link href="#contact" className={styles.navItem}>Contact</Link></li>
