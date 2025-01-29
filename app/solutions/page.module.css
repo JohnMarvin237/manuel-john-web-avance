@@ -10,7 +10,7 @@
     transition: transform 0.3s;
     flex: 1 1 (30% - 40px);
     box-sizing: border-box;
-    max-width: 500px;
+    max-width: 100vw;
 }
 
 .card:hover {

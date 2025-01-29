@@ -45,7 +45,7 @@ export default function Carousel({ slides }) {
         return null;
     }
 
-    return (
+    return <>
         <section className={styles.slider}>
             {/* <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
             <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} /> */}
@@ -62,5 +62,5 @@ export default function Carousel({ slides }) {
                 );
             })}
         </section>
-    );
+    </>;
 };
