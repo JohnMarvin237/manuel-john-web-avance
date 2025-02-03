@@ -1,0 +1,43 @@
+.sectionStyle {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sectionStyle:nth-child(odd) {
+    margin-left: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.sectionStyle:nth-child(even) {
+    margin-left: 200px;
+    background-color: #f8f9f0;
+    margin-bottom: 15px;
+}
+
+.titre_h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content_sec {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.image_sec {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+
+}
+

@@ -2,39 +2,53 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import NavBarItem from '@/components/NavBarItem';
+import SectionPage from '@/components/SectionPage';
+
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg';
 
 export default function Aquaponie() {
     return <>
-        <p id='debutPage'></p>
-        <nav>
-            <ul>
-                <li><Link href='#introduction'>Introduction</Link></li>
-                <li><Link href='#avantages'>Avantages de l'aquaponie</Link></li>
-                <li><Link href='#presentationVideo'>Presentation Video de l'aquaponie</Link></li>
-            </ul>
-        </nav>
+        <div className={styles.page}>
+            <p id='debutPage'></p>
+            <nav className={styles.navbar}>
+                <ul>
+                    <li><NavBarItem lien="#introduction">Introduction</NavBarItem></li>
+                    <li><NavBarItem lien="#avantages">Avantages de l'aquaponie</NavBarItem></li>
+                    <li><NavBarItem lien="#presentationVideo">Notre ferme d'aquaponie</NavBarItem></li>
+                </ul>
+            </nav>
 
-        <section id='introduction'>
-            <h2>C'est quoi l'Aquaponie</h2>
-            <Image src={Aquaponie1}></Image>
-            <p>L'aquaponie est une methode de culture qui combine l'aquaculture (elevage des poissons) et l'hydroponie (culture de plantes hors sol). Dans ce systeme, les dechets des poissons fournissent des nutriments pour les plantes, et les plantes filtrent l'eau pour les poissons.</p>
-        </section>
+            <div className={styles.contentPage}>
+                <SectionPage id='introduction' titre="C'est quoi l'Aquaponie?" image={Aquaponie1} alt="Image d'un systeme aquaponique">L'aquaponie est une methode de culture qui combine l'aquaculture (elevage des poissons) et l'hydroponie (culture de plantes hors sol). Dans ce systeme, les dechets des poissons fournissent des nutriments pour les plantes, et les plantes filtrent l'eau pour les poissons.</SectionPage>
 
-        <section id='avantages'>
-            <h2>Avantages de l'aquaponie</h2>
-            <ul>
-                <li><span>Ecologique:</span> Reduit les dechets et utilise moins d'eau que l'agriculture traditionnelle,</li>
-                <li><span>Efficace:</span> Les plantes poussent plus rapidement grace aux nutriments fournis par les poissons,</li>
-                <li><span>Polyvalent:</span> Peut etre installe a differentes echelles, de petits systemes domestiques a des fermes commerciales</li>
-            </ul>
-        </section>
+                <SectionPage id='avantages' titre="Avantages de l'aquaponie" >
+                    <ul>
+                        <li>
+                            <span>Ecologique: </span> 
+                            Reduit les dechets et utilise moins d'eau que l'agriculture traditionnelle,
+                        </li>
+                        <li>
+                            <span>Efficace: </span> 
+                            Les plantes poussent plus rapidement grace aux nutriments fournis par les poissons,
+                        </li>
+                        <li>
+                            <span>Polyvalent: </span> 
+                            Peut etre installe a differentes echelles, de petits systemes domestiques a des fermes commerciales
+                        </li>
+                    </ul>
+                </SectionPage>
 
-        <section id='presentationVideo'>
-            <h2>Notre ferme d'aquaponie</h2>
-            <iframe width="75%" height="500px" src="https://www.youtube.com/embed/7N72fH0trJs?start=3&rel=0" title="Notre Ferme d'Aquaponie" frameborder="0" allow='autoplay; encrypted-media; picture-in-picture' allowFullScreen></iframe>
-        </section>
+                <SectionPage id='presentationVideo' titre="Notre ferme d'aquaponie">
+                    Decouvrez notre ferme d'aquaponie dans cette video:
+                    
+                    <iframe src="https://www.youtube.com/embed/7N72fH0trJs?start=3&rel=0" title="Notre Ferme d'Aquaponie" frameBorder="0" allow='autoplay; encrypted-media; picture-in-picture' allowFullScreen className={styles.video}></iframe>
+                </SectionPage>
 
-        <button><Link href='#debutPage'>.</Link></button>
+                <div className={styles.buttonDeb}>
+                    <button><Link href='#debutPage'>⬆</Link></button>
+                </div>
+            </div>
+            </div>
     </>;
 };
