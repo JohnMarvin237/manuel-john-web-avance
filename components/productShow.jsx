@@ -1,4 +1,4 @@
-import styles from './productShow.module.css';
+import styles from './ProductShow.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 

@@ -81,41 +81,41 @@ const slides = [
 export default function Accueil() {
     return <>
         <div className={styles.home}>
-            <div className={ styles.bannerContainer }>
+            <div className={styles.bannerContainer}>
                 {/* <Banner slogan="Une solution technologique à chaque problème du quotidien!" ctaButton="En savoir plus">
                 </Banner> 
                 ButtonLink={AccueilLink}*/}
                 <Banner slogan='Une solution technologique a chaque probleme du quotidien' ButtonName='En savoir plus' fontImage={Banniere} />
             </div>
-            <div className={ styles.expertise }>
+            <div className={styles.expertise}>
                 <div className={styles.expertiseTitle}>
                     <h2>Notre Expertise</h2>
                 </div>
                 <div className={styles.expertiseContent}>
-                    <Carousel slides={slides}/>
-                </div>                
+                    <Carousel slides={slides} />
+                </div>
             </div>
-            <div className={ styles.testimonial}>
+            <div className={styles.testimonial}>
 
             </div>
-            <div className={ styles.project }>
+            <div className={styles.project}>
                 <h2>Quelques projets en cours de réalisations</h2>
-                <div className={ styles.cardContainer}>
-                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={ Aquaponie1 } >
+                <div className={styles.cardContainer}>
+                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={Aquaponie1} >
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Poissons</span>
                         <span className={styles.keywordCard}>Végétaux</span>
                         <span className={styles.keywordCard}>Electronique</span>
                         <span className={styles.keywordCard}>Poissons</span>
                     </CardHolder>
-                    <CardHolder titleCard='Crop Checker' description="Détection des anomalies dans les plantations" imageCard={ DroneIntell } >
+                    <CardHolder titleCard='Crop Checker' description="Détection des anomalies dans les plantations" imageCard={DroneIntell} >
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Drone</span>
                         <span className={styles.keywordCard}>Végétaux</span>
                         <span className={styles.keywordCard}>Electronique</span>
                         <span className={styles.keywordCard}>Analyse</span>
                     </CardHolder>
-                    <CardHolder titleCard='ChatBot AI' description="Création d'un ChatBot pour automatiser les requêtes des utilisateurs à l'aide de l'inteligence artificielle" imageCard={ ChatBot } >
+                    <CardHolder titleCard='ChatBot AI' description="Création d'un ChatBot pour automatiser les requêtes des utilisateurs à l'aide de l'inteligence artificielle" imageCard={ChatBot} >
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Assistant Virtuel</span>
                         <span className={styles.keywordCard}>Accès 24/7</span>
@@ -123,23 +123,23 @@ export default function Accueil() {
                         <span className={styles.keywordCard}>Multilangues</span>
                         <span className={styles.keywordCard}>Langage naturel</span>
                     </CardHolder>
-                    <CardHolder titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou un entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={ GestionEmployes } >
+                    <CardHolder titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou un entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={GestionEmployes} >
                         <span className={styles.keywordCard}>Gestion des paies</span>
                         <span className={styles.keywordCard}>Gestion des congés</span>
                         <span className={styles.keywordCard}>Gestion des services</span>
                         <span className={styles.keywordCard}>Gestion des stocks</span>
                         <span className={styles.keywordCard}>Gestion des quarts</span>
-                    </CardHolder>                                        
-                </div>                
+                    </CardHolder>
+                </div>
             </div>
-                        
-            <div className={ styles.team }>
+
+            <div className={styles.team}>
                 <h2>Notre équipe</h2>
-                <div className={ styles.teamContainer }>
-                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={ Personne } />
-                    <MemberProfile name='Jean Jacques' role='Développeur Mobile' description='Développeur mobile fullstack' image={ Personne } />
-                    <MemberProfile name='John Marvin' role='DevSecOps' description='Integration et Deploiement continu' image={ Personne } />
-                    <MemberProfile name='Manuel Luther' role='IA Developpeur' description='Développeur de solution a base de l intelligence artificielle' image={ Personne } />
+                <div className={styles.teamContainer}>
+                    <MemberProfile name='Moussa Sow' role='Développeur Web' description='Développeur web fullstack' image={Personne} />
+                    <MemberProfile name='Jean Jacques' role='Développeur Mobile' description='Développeur mobile fullstack' image={Personne} />
+                    <MemberProfile name='John Marvin' role='DevSecOps' description='Integration et Deploiement continu' image={Personne} />
+                    <MemberProfile name='Manuel Luther' role='IA Developpeur' description='Développeur de solution a base de l intelligence artificielle' image={Personne} />
                 </div>
             </div>
         </div>

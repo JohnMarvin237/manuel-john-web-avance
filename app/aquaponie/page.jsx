@@ -13,7 +13,7 @@ export default function Aquaponie() {
             <p id='debutPage'></p>
             <nav className={styles.navbar}>
                 <ul>
-                    <li><NavBarItem lien="#introduction">Introduction</NavBarItem></li>
+                    <li><NavBarItem lien="#introduction">C'est quoi l'Aquaponie</NavBarItem></li>
                     <li><NavBarItem lien="#avantages">Avantages de l'aquaponie</NavBarItem></li>
                     <li><NavBarItem lien="#presentationVideo">Notre ferme d'aquaponie</NavBarItem></li>
                 </ul>
