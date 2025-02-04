@@ -17,5 +17,8 @@
         "react-slick": "^0.30.3"
     },
     "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "eslint": "^9",
+        "eslint-config-next": "15.1.4"
     }
 }

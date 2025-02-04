@@ -78,7 +78,7 @@ export default function Accueil() {
     return <>
         <div className={styles.home}>
             <div className={styles.bannerContainer}>
-                <Banner slogan='Une solution technologique a chaque probleme du quotidien' ButtonName='En savoir plus' fontImage={Banniere} />
+                <Banner slogan='Une solution technologique a chaque probleme du quotidien' ButtonName='En savoir plus' fontImage={Banniere} ButtonLink="/"/>
             </div>
             <div className={styles.expertise}>
                 <div className={styles.expertiseTitle}>

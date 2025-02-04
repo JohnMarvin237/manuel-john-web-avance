@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Banner.module.css';
+import Link from 'next/link';
 
 // Creation du composant banniere pour l'image et le slogan en debut de page d'accueil
 export default function Banner({ fontImage, slogan , ButtonName, ButtonLink}) {
@@ -16,7 +17,11 @@ export default function Banner({ fontImage, slogan , ButtonName, ButtonLink}) {
 
                     <h2>{slogan}</h2>
 
-                    <button className={styles.button}>{ButtonName}</button>
+                    <Link href={ButtonLink}>
+                        <button className={styles.button}>
+                            {ButtonName}
+                        </button>
+                    </Link>
                     
                 </div>
             </div>
