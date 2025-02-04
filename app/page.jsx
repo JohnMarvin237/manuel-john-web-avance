@@ -94,21 +94,21 @@ export default function Accueil() {
             <div className={styles.project}>
                 <h2>Quelques projets en cours de réalisations</h2>
                 <div className={styles.cardContainer}>
-                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={Aquaponie1} >
+                    <CardHolder titleCard='Aquaponie' description="Production des poissons et des maréchères" imageCard={Aquaponie1} linkCard="/aquaponie">
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Poissons</span>
                         <span className={styles.keywordCard}>Végétaux</span>
                         <span className={styles.keywordCard}>Electronique</span>
                         <span className={styles.keywordCard}>Poissons</span>
                     </CardHolder>
-                    <CardHolder titleCard='Crop Checker' description="Détection des anomalies dans les plantations" imageCard={DroneIntell} >
+                    <CardHolder titleCard='Crop Checker' description="Détection des anomalies dans les plantations" imageCard={DroneIntell} linkCard="/drone">
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Drone</span>
                         <span className={styles.keywordCard}>Végétaux</span>
                         <span className={styles.keywordCard}>Electronique</span>
                         <span className={styles.keywordCard}>Analyse</span>
                     </CardHolder>
-                    <CardHolder titleCard='ChatBot AI' description="Création d'un ChatBot pour automatiser les requêtes des utilisateurs à l'aide de l'inteligence artificielle" imageCard={ChatBot} >
+                    <CardHolder titleCard='ChatBot AI' description="Création d'un ChatBot pour automatiser les requêtes des utilisateurs à l'aide de l'inteligence artificielle" imageCard={ChatBot} linkCard="/">
                         <span className={styles.keywordCard}>IA</span>
                         <span className={styles.keywordCard}>Assistant Virtuel</span>
                         <span className={styles.keywordCard}>Accès 24/7</span>
@@ -116,7 +116,7 @@ export default function Accueil() {
                         <span className={styles.keywordCard}>Multilangues</span>
                         <span className={styles.keywordCard}>Langage naturel</span>
                     </CardHolder>
-                    <CardHolder titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou un entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={GestionEmployes} >
+                    <CardHolder titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou un entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={GestionEmployes} linkCard="/">
                         <span className={styles.keywordCard}>Gestion des paies</span>
                         <span className={styles.keywordCard}>Gestion des congés</span>
                         <span className={styles.keywordCard}>Gestion des services</span>

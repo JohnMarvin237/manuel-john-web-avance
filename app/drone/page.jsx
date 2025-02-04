@@ -70,6 +70,6 @@ export default function Drone(){
                     </button>
                 </div>
             </div>
-            </div>
-    </>
-}
+        </div>
+    </>;
+};

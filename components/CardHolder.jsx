@@ -19,7 +19,7 @@ export default function CardHolder({ imageCard, titleCard, description, linkCard
                     {children}
                 </div><br />
 
-                <Link href='#'>
+                <Link href={linkCard}>
                     <button className={styles.button}>En savoir plus!</button>
                 </Link>
 

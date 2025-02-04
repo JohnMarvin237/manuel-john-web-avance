@@ -1,24 +1,25 @@
 .page {
     display: flex;
+    flex-direction: column;
 }
 
 .navbar {
-    width: 13%;
+    width: 100%;
     padding: 10px;
     background-color: #f4f4f4;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .contentPage {
-    width: 87%;
+    width: 100%;
     padding: 1px;
 }
 
 .video {
-    width: 75%;
-    height: 500px;
+    width: 100%;
+    height: auto;
     margin-top: 10px;
-    margin-left: 10vw;
 }
 
 .buttonDeb {
@@ -34,4 +35,25 @@
 .buttonDeb button {
     display: block;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .navbar {
+        width: 13%;
+        margin-bottom: 0;
+    }
+
+    .contentPage {
+        width: 87%;
+    }
+
+    .video {
+        width: 75%;
+        height: 500px;
+        margin-left: 10vw;
+    }
 }

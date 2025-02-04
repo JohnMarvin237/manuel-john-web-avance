@@ -1,16 +1,22 @@
+.solutionPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
 .card {
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     flex: 1 1 (30% - 40px);
     box-sizing: border-box;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .card:hover {
@@ -30,7 +36,6 @@
     margin-bottom: 15px;
     padding-right: 10px;
     overflow: hidden;
-    max-width: 200px;
 }
 
 .imageCard {
@@ -46,8 +51,14 @@
     color: #666;
 }
 
-.card p {
-    margin-bottom: 15px;
+.keywordCard{
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    font-size: 0.9em;
+    color: #333;
 }
 
 .button {
@@ -62,4 +73,16 @@
 
 .button:hover {
     background-color: #ff9c4f;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 (45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
 }

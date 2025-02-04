@@ -2,4 +2,32 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .productContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.productContainer > div{
+    flex: 1 1 calc(33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .productContainer > div {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .productContainer > div {
+        flex: 1 1 100%;
+    }
 }

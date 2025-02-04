@@ -26,7 +26,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return <html lang="en" className={`${roboto.variable} ${poppins.variable}`}>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <body className={styles.body}>
             <Header/>
             <main className={styles.main}>
