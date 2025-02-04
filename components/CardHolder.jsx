@@ -11,9 +11,9 @@ export default function CardHolder({ imageCard, titleCard, description, linkCard
             </div>
 
             <div>
-                <h2 className={styles.titleCard}>{titleCard}</h2>
+                <h2 className={styles.titleCardCss}>{titleCard}</h2>
 
-                <p className={styles.description}>{description}</p>
+                <p className={styles.descriptionCss}>{description}</p>
 
                 <div>
                     {children}
