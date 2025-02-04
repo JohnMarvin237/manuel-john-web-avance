@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 import styles from './Carousel.module.css';
 import Image from 'next/image';
@@ -47,8 +46,6 @@ export default function Carousel({ slides }) {
 
     return <>
         <section className={styles.slider}>
-            {/* <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
-            <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} /> */}
             {slides.map((slide, index) => {
                 return (
                     <div

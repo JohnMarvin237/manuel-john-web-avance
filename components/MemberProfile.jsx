@@ -1,6 +1,5 @@
 import styles from './MemberProfile.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function MemberProfile({ image, name, role, description }) {
     return (

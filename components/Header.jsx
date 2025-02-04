@@ -2,8 +2,6 @@ import styles from './Header.module.css';
 import Image from 'next/image';
 import logo from "@/public/logo.jpg";
 import Link from 'next/link';
-/*import { useState } from 'react';
-const [loggedIn, setLoggedIn] = useState(false);*/
 
 export default function Header() {
 
@@ -19,8 +17,5 @@ export default function Header() {
                 <li><Link href="#contact" className={styles.navItem}>Contact</Link></li>
             </ul>
         </nav>
-        {/*<button onClick={ () => setLoggedIn(!loggedIn)}>
-            {loggedIn ? "Déconnexion" : "Connexion"}
-        </button>*/}
     </header>
 };

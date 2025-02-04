@@ -9,8 +9,6 @@ export default function Footer() {
                     <li><a href="#contact" className={styles.footerItems}>CONTACT</a></li>
 
                 </ul>
-
-
             </nav>
             <ul className={styles.footerSocial}>
                 <li><a href='linkedin.com/in/manuel-wonda-0b0b062a7/' title='LinkedIn' target='_blank' rel='noopener'></a></li>

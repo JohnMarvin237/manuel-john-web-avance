@@ -16,12 +16,3 @@ export default function Banner({ fontImage, slogan , ButtonName, ButtonLink}) {
             </div>
         </>;
 };
-
-
-{/* <div className={styles.banner}>
-                <div className={styles.overlay}>
-                    <h1>{slogan}</h1>
-                    <button className={styles.ctaButton}>{ctaButton}</button>
-                </div>
-            </div> 
-            href={ButtonLink}*/}
