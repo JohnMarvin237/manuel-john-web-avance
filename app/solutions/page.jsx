@@ -16,10 +16,12 @@ export default function Solution() {
         <span className={styles.keywordCard}>Multilangues</span>
         <span className={styles.keywordCard}>Langage naturel</span>
         <Link href='#'>
-          <button className={styles.button}>En savoir plus!</button>
+          <button className={styles.button}>
+            En savoir plus!
+          </button>
         </Link>
       </div>
-      
+
       <div titleCard='Logiciel de gestion du personnel' description="Application qui peut être utilisée par une startup ou une entreprise de plus grand calibre pour la gestion de ses employés et de ses avoirs" imageCard={GestionEmployes}>
         <span className={styles.keywordCard}>Gestion des paies</span>
         <span className={styles.keywordCard}>Gestion des congés</span>
@@ -27,9 +29,11 @@ export default function Solution() {
         <span className={styles.keywordCard}>Gestion des stocks</span>
         <span className={styles.keywordCard}>Gestion des quarts</span>
         <Link href='#'>
-          <button className={styles.button}>En savoir plus!</button>
+          <button className={styles.button}>
+            En savoir plus!
+          </button>
         </Link>
       </div>
     </div>
-  </>
-}
+  </>;
+};

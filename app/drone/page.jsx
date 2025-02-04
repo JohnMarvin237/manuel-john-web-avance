@@ -1,5 +1,4 @@
 import styles from './page.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import NavBarItem from '@/components/NavBarItem';
@@ -13,14 +12,28 @@ export default function Drone(){
             <p id='debutPage'></p>
             <nav className={styles.navbar}>
                 <ul>
-                    <li><NavBarItem lien="#introduction">Introduction</NavBarItem></li>
-                    <li><NavBarItem lien="#avantages">Avantages du Crop Checker</NavBarItem></li>
-                    <li><NavBarItem lien="#presentationVideo">Notre ferme d'aquaponie</NavBarItem></li>
+                    <li>
+                        <NavBarItem lien="#introduction">
+                            Introduction
+                        </NavBarItem>
+                    </li>
+                    <li>
+                        <NavBarItem lien="#avantages">
+                            Avantages du Crop Checker
+                        </NavBarItem>
+                    </li>
+                    <li>
+                        <NavBarItem lien="#presentationVideo">
+                            Notre ferme d'aquaponie
+                        </NavBarItem>
+                    </li>
                 </ul>
             </nav>
 
             <div className={styles.contentPage}>
-                <SectionPage id='introduction' titre="Introduction" image={DroneIntell} alt="Image d'un drone agricole">Le present projet porte sur la conception d'un drone qui a l'aide de l'Intelligence Artificielle se deplace de maniere autonome dans une plantation tout en filmant les differents plants de cacao pour detecter les differentes anomalies qui peuvent impacter la production de ces derniers. A la fin de ces vols, il va sortir un graphique qui permettra de cartographier la plantation en fonction des differentes anomalies qu'il aura deceler. Par la suite, l'IA analysera et proposera des plans de traitement de ces anomalies.</SectionPage>
+                <SectionPage id='introduction' titre="Introduction" image={DroneIntell} alt="Image d'un drone agricole">
+                    Le present projet porte sur la conception d'un drone qui a l'aide de l'Intelligence Artificielle se deplace de maniere autonome dans une plantation tout en filmant les differents plants de cacao pour detecter les differentes anomalies qui peuvent impacter la production de ces derniers. A la fin de ces vols, il va sortir un graphique qui permettra de cartographier la plantation en fonction des differentes anomalies qu'il aura deceler. Par la suite, l'IA analysera et proposera des plans de traitement de ces anomalies.
+                </SectionPage>
 
                 <SectionPage id='avantages' titre="Avantages du Crop Checker" >
                     <ol>
@@ -50,7 +63,11 @@ export default function Drone(){
                 </SectionPage>
 
                 <div className={styles.buttonDeb}>
-                    <button><Link href='#debutPage'>⬆</Link></button>
+                    <button>
+                        <Link href='#debutPage'>
+                            ⬆
+                        </Link>
+                    </button>
                 </div>
             </div>
             </div>

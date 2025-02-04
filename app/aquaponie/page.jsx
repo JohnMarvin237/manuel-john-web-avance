@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 import NavBarItem from '@/components/NavBarItem';
@@ -13,27 +13,41 @@ export default function Aquaponie() {
             <p id='debutPage'></p>
             <nav className={styles.navbar}>
                 <ul>
-                    <li><NavBarItem lien="#introduction">C'est quoi l'Aquaponie</NavBarItem></li>
-                    <li><NavBarItem lien="#avantages">Avantages de l'aquaponie</NavBarItem></li>
-                    <li><NavBarItem lien="#presentationVideo">Notre ferme d'aquaponie</NavBarItem></li>
+                    <li>
+                        <NavBarItem lien="#introduction">
+                            C'est quoi l'Aquaponie
+                        </NavBarItem>
+                    </li>
+                    <li>
+                        <NavBarItem lien="#avantages">
+                            Avantages de l'aquaponie
+                        </NavBarItem>
+                    </li>
+                    <li>
+                        <NavBarItem lien="#presentationVideo">
+                            Notre ferme d'aquaponie
+                        </NavBarItem>
+                    </li>
                 </ul>
             </nav>
 
             <div className={styles.contentPage}>
-                <SectionPage id='introduction' titre="C'est quoi l'Aquaponie?" image={Aquaponie1} alt="Image d'un systeme aquaponique">L'aquaponie est une methode de culture qui combine l'aquaculture (elevage des poissons) et l'hydroponie (culture de plantes hors sol). Dans ce systeme, les dechets des poissons fournissent des nutriments pour les plantes, et les plantes filtrent l'eau pour les poissons.</SectionPage>
+                <SectionPage id='introduction' titre="C'est quoi l'Aquaponie?" image={Aquaponie1} alt="Image d'un systeme aquaponique">
+                    L'aquaponie est une methode de culture qui combine l'aquaculture (elevage des poissons) et l'hydroponie (culture de plantes hors sol). Dans ce systeme, les dechets des poissons fournissent des nutriments pour les plantes, et les plantes filtrent l'eau pour les poissons.
+                </SectionPage>
 
                 <SectionPage id='avantages' titre="Avantages de l'aquaponie" >
                     <ul>
                         <li>
-                            <span>Ecologique: </span> 
+                            <span>Ecologique: </span>
                             Reduit les dechets et utilise moins d'eau que l'agriculture traditionnelle,
                         </li>
                         <li>
-                            <span>Efficace: </span> 
+                            <span>Efficace: </span>
                             Les plantes poussent plus rapidement grace aux nutriments fournis par les poissons,
                         </li>
                         <li>
-                            <span>Polyvalent: </span> 
+                            <span>Polyvalent: </span>
                             Peut etre installe a differentes echelles, de petits systemes domestiques a des fermes commerciales
                         </li>
                     </ul>
@@ -41,14 +55,18 @@ export default function Aquaponie() {
 
                 <SectionPage id='presentationVideo' titre="Notre ferme d'aquaponie">
                     Decouvrez notre ferme d'aquaponie dans cette video:
-                    
+
                     <iframe src="https://www.youtube.com/embed/7N72fH0trJs?start=3&rel=0" title="Notre Ferme d'Aquaponie" frameBorder="0" allow='autoplay; encrypted-media; picture-in-picture' allowFullScreen className={styles.video} alt="Notre Ferme d'Aquaponie"></iframe>
                 </SectionPage>
 
                 <div className={styles.buttonDeb}>
-                    <button><Link href='#debutPage'>⬆</Link></button>
+                    <button>
+                        <Link href='#debutPage'>
+                            ⬆
+                        </Link>
+                    </button>
                 </div>
             </div>
-            </div>
+        </div>
     </>;
 };

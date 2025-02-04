@@ -1,12 +1,12 @@
-.card{
+.card {
     background-color: #f8f9fa;
-    border:  1px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
     margin: 5px;
     display: flex;
     flex-direction: row;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     flex: 1 1 (30% - 40px);
     box-sizing: border-box;
@@ -17,7 +17,7 @@
     transform: scale(1.05);
 }
 
-.titleCard{
+.titleCard {
     font-size: 1.2em;
     margin-bottom: 15px;
     color: #333;
@@ -63,4 +63,3 @@
 .button:hover {
     background-color: #ff9c4f;
 }
-

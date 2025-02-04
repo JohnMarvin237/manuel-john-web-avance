@@ -5,7 +5,6 @@ import ProductShow from "@/components/ProductShow";
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg';
 import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
 import ChatBot from '@/public/chatbot.png';
-import GestionEmployes from '@/public/gestionEmployes.png';
 
 export default function Produit(){
     return <>
@@ -16,5 +15,5 @@ export default function Produit(){
 
         <ProductShow titleCard='ChatBot AI' description="Ceci est un chatbot qui fait tourner une Intelligence Artificielle pour automatiser toutes les taches de communication avec les utilisateurs. Elle peut etre utiliser dans n'importe quel secteur d'activite qui veut utilisr un chatbot qui se veut precis, concis et repondant a toutes les taches critiques automatisables dans la gestion des requetes clients." imageCard={ChatBot} link='/'/>
     </div>
-    </>
-}
+    </>;
+};
