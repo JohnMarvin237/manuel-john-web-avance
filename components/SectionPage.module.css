@@ -7,13 +7,13 @@
 
 .sectionStyle:nth-child(odd) {
     margin-left: 20px;
-    background-color: #f8f9fa;
+    background-color: #d6d6d6;
     margin-bottom: 15px;
 }
 
 .sectionStyle:nth-child(even) {
-    margin-left: 200px;
-    background-color: #f8f9f0;
+    margin-left: 150px;
+    background-color: #007BFF;
     margin-bottom: 15px;
 }
 

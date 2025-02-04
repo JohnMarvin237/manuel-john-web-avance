@@ -42,7 +42,7 @@ export default function Aquaponie() {
                 <SectionPage id='presentationVideo' titre="Notre ferme d'aquaponie">
                     Decouvrez notre ferme d'aquaponie dans cette video:
                     
-                    <iframe src="https://www.youtube.com/embed/7N72fH0trJs?start=3&rel=0" title="Notre Ferme d'Aquaponie" frameBorder="0" allow='autoplay; encrypted-media; picture-in-picture' allowFullScreen className={styles.video}></iframe>
+                    <iframe src="https://www.youtube.com/embed/7N72fH0trJs?start=3&rel=0" title="Notre Ferme d'Aquaponie" frameBorder="0" allow='autoplay; encrypted-media; picture-in-picture' allowFullScreen className={styles.video} alt="Notre Ferme d'Aquaponie"></iframe>
                 </SectionPage>
 
                 <div className={styles.buttonDeb}>
