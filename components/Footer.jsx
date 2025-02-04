@@ -1,24 +1,20 @@
 import styles from './Footer.module.css';
+import Link from 'next/link';
 export default function Footer() {
     return <footer className={styles.footer}>
         <div>
             <nav className={styles.nav}>
                 <ul className={styles.footerList}>
-                    <li><a href="#à-propos" className={styles.footerItems}>À PROPOS</a></li>
-                    <li><a href="#carriere" className={styles.footerItems}>CARRIÈRE</a></li>
-                    <li><a href="#contact" className={styles.footerItems}>CONTACT</a></li>
+                    <li><Link href="/" className={styles.footerItems}>À PROPOS</Link></li>
+                    <li><Link href="/" className={styles.footerItems}>CARRIÈRE</Link></li>
+                    <li><Link href="/" className={styles.footerItems}>CONTACT</Link></li>
 
                 </ul>
             </nav>
-            <ul className={styles.footerSocial}>
-                <li><a href='linkedin.com/in/manuel-wonda-0b0b062a7/' title='LinkedIn' target='_blank' rel='noopener'></a></li>
-            </ul>
 
-            &copy; John-Manuel Dev Solutions
-            Développé par Manuel Wonda & John Ndekebitik
-
-            <div className={styles.footerlogo}>
-
+            <div className={styles.footerText}>
+                &copy; John-Manuel Dev Solutions<br />
+                Développé par Manuel Wonda & John Ndekebitik
             </div>
         </div>
 
