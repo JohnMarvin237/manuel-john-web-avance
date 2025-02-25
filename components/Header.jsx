@@ -36,7 +36,7 @@ export default function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#contact" className={styles.navItem}>
+                        <Link href="/contact" className={styles.navItem}>
                             Contact
                         </Link>
                     </li>
