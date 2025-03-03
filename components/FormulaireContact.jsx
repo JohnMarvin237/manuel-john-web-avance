@@ -4,9 +4,11 @@ import { useState } from 'react';
 import styles from './FormulaireContact.module.css';
 import pays from '@/data/PaysIndicatifs.json';
 import emailjs from 'emailjs-com';
+import { validationContact } from '@/validation/validationContact';
+import { validationServerForm } from '@/actions/validationServer';
 
 export default function FormulaireContact() {
-    const [formState, setFormState] = useState({
+    const initialState = {
         courriel: { valeur: '', erreur: null },
         telephone: { valeur: '', erreur: null },
         nom: { valeur: '', erreur: null },
@@ -18,58 +20,23 @@ export default function FormulaireContact() {
         pays: { valeur: '', erreur: null },
         titre: { valeur: '', erreur: null },
         message: { valeur: '', erreur: null },
-        methode_reponse: { valeur: '', erreur: null },
-    });
+    };
+
+    const [formState, setFormState] = useState(initialState);
+    const [message, setMessage] = useState();
+    const [messageType, setMessageType] = useState();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const courriel = formData.get('email');
-        const telephone = formData.get('telephone');
-        const nom = formData.get('nom');
-        const prenom = formData.get('prenom');
-        const nom_rue = formData.get('Nom_rue');
-        const numero_bloc = formData.get('NumeroBloc');
-        const ville = formData.get('ville');
-        const etat = formData.get('etat');
-        const pays = formData.get('pays');
-        const titre = formData.get('titre');
-        const message = formData.get('message');
-
-        let newState = { ...formState };
-        let erreur = false;
-
-        if (!courriel) {
-            newState.courriel.erreur = 'Veuillez entrer une adresse courriel';
-            erreur = true;
-        } else if (!courriel.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)) {
-            newState.courriel.erreur = 'Veuillez entrer une adresse courriel valide';
-            erreur = true;
-        } else {
-            newState.courriel.erreur = null;
-        }
-
-        if (!telephone) {
-            newState.telephone.erreur = 'Veuillez entrer un numéro de téléphone';
-            erreur = true;
-        } else if (!telephone.match(/^\d{10,15}$/)) {
-            newState.telephone.erreur = 'Veuillez entrer un numéro de téléphone valide';
-            erreur = true;
-        } else {
-            newState.telephone.erreur = null;
-        }
-
-        if (!nom) {
-            newState.nom.erreur = 'Veuillez entrer un nom';
-            erreur = true;
-        } else {
-            newState.nom.erreur = null;
-        }
+        const [erreur, newState] = validationContact(formData);
 
         setFormState(newState);
 
         if (erreur) {
+            setMessage("Veuillez corriger les erreurs dans le formulaire");
+            setMessageType('error');
             return;
         }
 
@@ -77,22 +44,23 @@ export default function FormulaireContact() {
             'service_84dn9tc',
             'template_a9b1w42',
             {
-                nom,
-                prenom,
-                courriel,
-                telephone,
-                nom_rue,
-                numero_bloc,
-                ville,
-                etat,
-                pays,
-                titre,
-                message,
+                nom: formData.get('nom'),
+                prenom: formData.get('prenom'),
+                courriel: formData.get('email'),
+                telephone: formData.get('telephone'),
+                nom_rue: formData.get('Nom_rue'),
+                numero_bloc: formData.get('NumeroBloc'),
+                ville: formData.get('ville'),
+                etat: formData.get('etat'),
+                pays: formData.get('pays'),
+                titre: formData.get('titre'),
+                message: formData.get('message'),
             },
             "62qo-T1uEvB8sQIa6"
         )
         .then(() => {
-            alert('Votre message a été envoyé avec succès');
+            setMessage("Votre message a été envoyé avec succès!");
+            setMessageType('success');
             setFormState({
                 courriel: { valeur: '', erreur: null },
                 telephone: { valeur: '', erreur: null },
@@ -105,13 +73,19 @@ export default function FormulaireContact() {
                 pays: { valeur: '', erreur: null },
                 titre: { valeur: '', erreur: null },
                 message: { valeur: '', erreur: null },
-                methode_reponse: { valeur: '', erreur: null },
             });
             event.target.reset();
+            console.log('Message envoyé');
         })
         .catch(() => {
-            alert('Une erreur est survenue lors de l\'envoi du message');
+            setMessage("Une erreur est survenue lors de l'envoi du message");
+            setMessageType('error');
+            console.log("Une erreur est survenue lors de l'envoi du message");
         });
+
+        setTimeout(() => {
+            setMessage("");
+        }, 5000);
     };
 
     return (
@@ -173,9 +147,17 @@ export default function FormulaireContact() {
                 <div>
                     <label>Message:</label>
                     <textarea name="message"></textarea>
+                    <div className={styles.erreur}>{formState.message.erreur}</div>
                 </div>
-                <button type="submit">Envoyer</button>
+                <button type="submit" >Envoyer</button>
+
+                { message && (
+                <div className={`${styles.Valider} ${messageType ==="success" ? styles.success : styles.errors}`}>
+                    {message}
+                </div>
+            )}
             </form>
+            
         </div>
     );
-}
+};

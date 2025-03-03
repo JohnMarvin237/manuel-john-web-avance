@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // Creation d'un composant ProductShow qui prend en paramètre un titre, une description, une image et un lien et qui affiche une carte de produit
-export default function ProductShow({ titleCard, description, imageCard, link }) {
+export default function ProductShow({ titleCard, description, imagecard, link }) {
     return <>
         <div className={styles.productShow}>
-            <div className={styles.imageCard}>
-                <Image src={imageCard} alt='Image of the product' layout='fill' objectFit='cover' quality={100} />
+            <div className={styles.imagecard}>
+                <Image src={imagecard} alt='Image of the product' layout='fill' objectFit='cover' quality={100} />
             </div>
 
             <div className={styles.overlay}></div>
