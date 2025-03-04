@@ -35,8 +35,9 @@ export default function FormulaireContact() {
         setFormState(newState);
 
         if (erreur) {
-            setMessage("Veuillez corriger les erreurs dans le formulaire");
-            setMessageType('error');
+            // setMessage("Veuillez corriger les erreurs dans le formulaire");
+            // setMessageType('error');
+            console.log('Erreur dans le formulaire');
             return;
         }
 
