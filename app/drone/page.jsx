@@ -6,6 +6,16 @@ import SectionPage from '@/components/SectionPage';
 
 import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
 
+/**
+ * @type {import("next").Metadata}
+ */
+export const metadata = {
+    title: "Drone | John-Manuel Dev Solutions",
+    description: "Découvrez le Crop Checker, un drone agricole intelligent qui utilise l'IA pour surveiller les plantations et optimiser les cultures",
+    keywords: ["drone", "agriculture", "cacao", "plantation", "surveillance", "IA", "intelligence", "artificielle", "CropChecker", "John-Manuel", "Dev",
+        "Solutions", "John-Manuel Dev Solutions"],
+};
+
 export default function Drone(){
     return <>
         <div className={styles.page}>

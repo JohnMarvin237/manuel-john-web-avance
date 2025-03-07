@@ -7,6 +7,15 @@ import SectionPage from '@/components/SectionPage';
 
 import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg';
 
+/**
+ * @type {import("next").Metadata}
+ */
+export const metadata = {
+    title: "Aquaponie | John-Manuel Dev Solutions",
+    description: "Découvrez l'aquaponie, une méthode de culture qui combine l'aquaculture et l'hydroponie",
+    keywords: ["aquaponie", "culture", "aquaculture", "hydroponie", "poissons", "plantes"],
+};
+
 export default function Aquaponie() {
     return <>
         <div className={styles.page}>

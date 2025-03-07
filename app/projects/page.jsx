@@ -6,6 +6,17 @@ import Aquaponie1 from '@/public/AquaponieWebAvancee.jpg';
 import DroneIntell from '@/public/DroneAgriWebAvance.jpg';
 import ChatBot from '@/public/chatbot.png';
 
+/**
+ * @type {import("next").Metadata}
+ */
+export const metadata = {
+    title: "Projets | John-Manuel Dev Solutions",
+    description: "Découvrez les différents projets de John-Manuel Dev Solutions",
+    keywords
+: ["projets", "John-Manuel", "Dev",
+        "Solutions", "John-Manuel Dev Solutions", "aquaponie", "drone", "chatbot"],
+};
+
 export default function Produit(){
     return <>
         <div className={styles.productContainer}>

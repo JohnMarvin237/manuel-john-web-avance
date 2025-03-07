@@ -5,6 +5,17 @@ import Link from "next/link";
 import ChatBot from '@/public/chatbot.png';
 import GestionEmployes from '@/public/gestionEmployes.png';
 
+/**
+ * @type {import("next").Metadata}
+ */
+export const metadata = {
+  title: "Solutions | John-Manuel Dev Solutions",
+  description: "Découvrez les différentes solutions de John-Manuel Dev Solutions",
+  keywords
+: ["solutions", "John-Manuel", "Dev",
+      "Solutions", "John-Manuel Dev Solutions", "chatbot", "gestion", "employés"],
+};
+
 export default function Solution() {
   return <>
     <div className={styles.solutionPage}>

@@ -3,9 +3,8 @@
 import { useState } from 'react';
 import styles from './FormulaireContact.module.css';
 import pays from '@/data/PaysIndicatifs.json';
-import emailjs from 'emailjs-com';
-import { validationContact } from '@/validation/validationContact';
 import { validationServerForm } from '@/actions/validationServer';
+import { useRouter } from 'next/navigation';
 
 export default function FormulaireContact() {
     const initialState = {
@@ -26,63 +25,25 @@ export default function FormulaireContact() {
     const [message, setMessage] = useState();
     const [messageType, setMessageType] = useState();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
+        useRouter
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const [erreur, newState] = validationContact(formData);
+        const [erreurServeur, newStateServeur, messageServeur, typeMessage] = await validationServerForm(formData);
 
-        setFormState(newState);
+        setFormState(newStateServeur);
 
-        if (erreur) {
-            // setMessage("Veuillez corriger les erreurs dans le formulaire");
-            // setMessageType('error');
+        if (erreurServeur) {
             console.log('Erreur dans le formulaire');
             return;
         }
 
-        emailjs.send(
-            'service_84dn9tc',
-            'template_a9b1w42',
-            {
-                nom: formData.get('nom'),
-                prenom: formData.get('prenom'),
-                courriel: formData.get('email'),
-                telephone: formData.get('telephone'),
-                nom_rue: formData.get('Nom_rue'),
-                numero_bloc: formData.get('NumeroBloc'),
-                ville: formData.get('ville'),
-                etat: formData.get('etat'),
-                pays: formData.get('pays'),
-                titre: formData.get('titre'),
-                message: formData.get('message'),
-            },
-            "62qo-T1uEvB8sQIa6"
-        )
-        .then(() => {
-            setMessage("Votre message a été envoyé avec succès!");
-            setMessageType('success');
-            setFormState({
-                courriel: { valeur: '', erreur: null },
-                telephone: { valeur: '', erreur: null },
-                nom: { valeur: '', erreur: null },
-                prenom: { valeur: '', erreur: null },
-                nom_rue: { valeur: '', erreur: null },
-                numero_bloc: { valeur: '', erreur: null },
-                ville: { valeur: '', erreur: null },
-                etat: { valeur: '', erreur: null },
-                pays: { valeur: '', erreur: null },
-                titre: { valeur: '', erreur: null },
-                message: { valeur: '', erreur: null },
-            });
-            event.target.reset();
-            console.log('Message envoyé');
-        })
-        .catch(() => {
-            setMessage("Une erreur est survenue lors de l'envoi du message");
-            setMessageType('error');
-            console.log("Une erreur est survenue lors de l'envoi du message");
-        });
+        setMessage(messageServeur);
+        setMessageType(typeMessage);
+
+        event.target.reset();
+        setFormState(initialState);
 
         setTimeout(() => {
             setMessage("");
