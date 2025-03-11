@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './FormulaireContact.module.css';
 import pays from '@/data/PaysIndicatifs.json';
 import { validationServerForm } from '@/actions/validationServer';
+import { validationContact } from '@/validation/validationContact';
 import { useRouter } from 'next/navigation';
 
 export default function FormulaireContact() {
@@ -26,10 +27,17 @@ export default function FormulaireContact() {
     const [messageType, setMessageType] = useState();
 
     const handleSubmit = async (event) => {
-        useRouter
         event.preventDefault();
 
         const formData = new FormData(event.target);
+        const [erreur, newState] = validationContact(formData);
+        
+        if (erreur) {
+            console.log('Erreur dans le formulaire', erreur);
+            setFormState(newState);
+            return;
+        }
+
         const [erreurServeur, newStateServeur, messageServeur, typeMessage] = await validationServerForm(formData);
 
         setFormState(newStateServeur);
