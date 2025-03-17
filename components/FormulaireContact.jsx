@@ -5,7 +5,6 @@ import styles from './FormulaireContact.module.css';
 import pays from '@/data/PaysIndicatifs.json';
 import { validationServerForm } from '@/actions/validationServer';
 import { validationContact } from '@/validation/validationContact';
-import { useRouter } from 'next/navigation';
 
 export default function FormulaireContact() {
     const initialState = {
@@ -30,20 +29,24 @@ export default function FormulaireContact() {
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const [erreur, newState] = validationContact(formData);
+        const formDataObj = Object.fromEntries(formData.entries());
+        const [erreur, newState] = validationContact(formDataObj);
         
         if (erreur) {
-            console.log('Erreur dans le formulaire', erreur);
+            console.log('Erreur dans le formulaire côté client', erreur);
             setFormState(newState);
             return;
         }
 
-        const [erreurServeur, newStateServeur, messageServeur, typeMessage] = await validationServerForm(formData);
+        const [erreurServeur, newStateServeur, messageServeur, typeMessage] = await validationServerForm(formDataObj);
 
         setFormState(newStateServeur);
 
         if (erreurServeur) {
-            console.log('Erreur dans le formulaire');
+            console.log('Erreur dans le formulaire côté serveur', erreurServeur);
+            setFormState(newStateServeur);
+            setMessage(messageServeur);
+            setMessageType(typeMessage);
             return;
         }
 
@@ -55,7 +58,7 @@ export default function FormulaireContact() {
 
         setTimeout(() => {
             setMessage("");
-        }, 5000);
+        }, 3000);
     };
 
     return (
@@ -83,7 +86,7 @@ export default function FormulaireContact() {
                 </div>
                 <div>
                     <label>Email:</label>
-                    <input type="email" name="email" defaultValue={formState.courriel.valeur} />
+                    <input type="email" name="courriel" defaultValue={formState.courriel.valeur} />
                     <div className={styles.erreur}>{formState.courriel.erreur}</div>
                 </div>
                 <div>
@@ -100,8 +103,8 @@ export default function FormulaireContact() {
                 </div>
                 <div>
                     <label>Adresse:</label>
-                    <input type="text" name="Nom_rue" placeholder="Nom et numero de rue" />
-                    <input type="text" name="NumeroBloc" placeholder="Numéro d'appartement" />
+                    <input type="text" name="nom_rue" placeholder="Nom et numero de rue" />
+                    <input type="text" name="numero_bloc" placeholder="Numéro d'appartement" />
                     <input type="text" name="ville" placeholder="Ville" />
                     <input type="text" name="etat" placeholder="État/Région/Province" />
                     <select name="pays">

@@ -1,29 +1,29 @@
 export function validationContact(formData) {
-    const courriel = formData.get('email');
-    const telephone = formData.get('telephone');
-    const nom = formData.get('nom');
-    const prenom = formData.get('prenom');
-    const nom_rue = formData.get('Nom_rue');
-    const numero_bloc = formData.get('NumeroBloc');
-    const ville = formData.get('ville');
-    const etat = formData.get('etat');
-    const pays = formData.get('pays');
-    const titre = formData.get('titre');
-    const message = formData.get('message');
+    const courriel = formData.courriel;
+    const telephone = formData.telephone;
+    const nom = formData.nom;
+    const prenom = formData.prenom;
+    const nom_rue = formData.nom_rue;
+    const numero_bloc = formData.numero_bloc;
+    const ville = formData.ville;
+    const etat = formData.etat;
+    const pays = formData.pays;
+    const titre = formData.titre;
+    const message = formData.message;
 
     let erreur = false;
     let newState = {
-        courriel: {valeur: '', erreur: null},
-        telephone: {valeur: '', erreur: null},
-        nom: {valeur: '', erreur: null},
-        prenom: {valeur: '', erreur: null},
-        nom_rue: {valeur: '', erreur: null},
-        numero_bloc: {valeur: '', erreur: null},
-        ville: {valeur: '', erreur: null},
-        etat: {valeur: '', erreur: null},
-        pays: {valeur: '', erreur: null},
-        titre: {valeur: '', erreur: null},
-        message: {valeur: '', erreur: null},
+        courriel: { valeur: courriel, erreur: null },
+        telephone: { valeur: telephone, erreur: null },
+        nom: { valeur: nom, erreur: null },
+        prenom: { valeur: prenom, erreur: null },
+        nom_rue: { valeur: nom_rue, erreur: null },
+        numero_bloc: { valeur: numero_bloc, erreur: null },
+        ville: { valeur: ville, erreur: null },
+        etat: { valeur: etat, erreur: null },
+        pays: { valeur: pays, erreur: null },
+        titre: { valeur: titre, erreur: null },
+        message: { valeur: message, erreur: null },
     };
 
     if (!courriel) {

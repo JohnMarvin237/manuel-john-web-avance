@@ -20,8 +20,8 @@
 
 .navList {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: .5rem;
+    padding: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +30,9 @@
 .navItem {
     color: #0056D2;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 1rem;
     font-size: 16px;
+    padding: 1rem;
 }
 
 .image {
