@@ -65,7 +65,7 @@ export default function FormulaireContact() {
 
     return (
         <div className={styles.body}>
-            <form action = {formAction} className={styles.form} noValidate>
+            <form onSubmit={handleSubmit} className={styles.form} noValidate>
                 <div>
                     <label>Civilité:</label>
                     <select name="civilite">
