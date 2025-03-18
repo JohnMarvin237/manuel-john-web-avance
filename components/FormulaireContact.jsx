@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useActionState, useState } from 'react';
 import styles from './FormulaireContact.module.css';
 import pays from '@/data/PaysIndicatifs.json';
 import { validationServerForm } from '@/actions/validationServer';
@@ -61,9 +61,11 @@ export default function FormulaireContact() {
         }, 3000);
     };
 
+    const [state, formAction ] = useActionState(handleSubmit, null);
+
     return (
         <div className={styles.body}>
-            <form onSubmit={handleSubmit} className={styles.form} noValidate>
+            <form action = {formAction} className={styles.form} noValidate>
                 <div>
                     <label>Civilité:</label>
                     <select name="civilite">

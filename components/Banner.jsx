@@ -8,7 +8,7 @@ export default function Banner({ fontImage, slogan , ButtonName, ButtonLink}) {
     return <>
             <div className={styles.banner}>
                 <div className={styles.background}>
-                    <Image src={fontImage} alt='Background Image' layout='fill' objectFit='cover' quality={100}/>
+                    <Image src={fontImage} alt='Background Image' layout='fill' objectFit='cover' quality={100} priority/>
                 </div>
 
                 <div className={styles.overlay}></div>
