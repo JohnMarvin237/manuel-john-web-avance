@@ -31,7 +31,7 @@ export default function FormulaireContact() {
         const formData = new FormData(event.target);
         const formDataObj = Object.fromEntries(formData.entries());
         const [erreur, newState] = validationContact(formDataObj);
-        
+
         if (erreur) {
             console.log('Erreur dans le formulaire côté client', erreur);
             setFormState(newState);
@@ -124,13 +124,13 @@ export default function FormulaireContact() {
                 </div>
                 <button type="submit" >Envoyer</button>
 
-                { message && (
-                <div className={`${styles.Valider} ${messageType ==="success" ? styles.success : styles.errors}`}>
-                    {message}
-                </div>
-            )}
+                {message && (
+                    <div className={`${styles.Valider} ${messageType === "success" ? styles.success : styles.errors}`}>
+                        {message}
+                    </div>
+                )}
             </form>
-            
+
         </div>
     );
 };

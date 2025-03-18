@@ -45,7 +45,7 @@ export function validationContact(formData) {
     } else {
         newState.telephone.erreur = null;
     }
-    
+
     if (!message) {
         newState.message.erreur = 'Veuillez entrer un message';
         erreur = true;
