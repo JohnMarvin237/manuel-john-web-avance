@@ -11,6 +11,7 @@
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
         "axios": "^1.8.3",
+        "email-js": "^2.0.3",
         "emailjs": "^4.0.3",
         "emailjs-com": "^3.2.0",
         "manuel-john-web-avance": "file:",
